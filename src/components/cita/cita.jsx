@@ -7,7 +7,7 @@ function Cita({ cita, index, eliminarCita }) {
       <p class= "textoCita">Fecha: <span>{cita.fecha}</span></p>
       <p class= "textoCita">Hora: <span>{cita.hora}</span></p>
       <p class= "textoCita">Sintomas: <span>{cita.sintomas}</span></p>
-      <button className="buttonEliminarCitas" onClick={() => eliminarCita(index)}>Eliminar ×</button>
+      <button className="buttonEliminarCitas" onClick={() => { if (window.confirm("¿Estás seguro de que deseas eliminar esta cita?")) {eliminarCita(index);}}} >Eliminar × </button>
     </div>
   );
 }

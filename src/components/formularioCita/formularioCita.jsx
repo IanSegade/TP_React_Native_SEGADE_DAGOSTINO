@@ -12,6 +12,7 @@ function FormularioCita({ agregarCita }) {
 
   const handleSubmit = e => {
     e.preventDefault();
+    const confirmar = window.confirm("¿Deseas agregar esta cita?"); if (!confirmar) return;
     agregarCita(formData);
     setFormData({ mascota: '', propietario: '', fecha: '', hora: '', sintomas: '' });
   };
